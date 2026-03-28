@@ -1,126 +1,75 @@
-"""
-Basic tests for OpenShelf backend API.
+"""Basic tests for the OpenShelf FastAPI application."""
 
-Uses pytest-asyncio and httpx AsyncClient with mocked database dependencies.
-"""
+from __future__ import annotations
 
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
-import pytest_asyncio
 from httpx import ASGITransport, AsyncClient
 
-
-# ---------------------------------------------------------------------------
-# App import — gracefully skip if dependencies aren't installed yet
-# ---------------------------------------------------------------------------
-try:
-    from main import app
-except ImportError:
-    import sys
-    from pathlib import Path
-
-    sys.path.insert(0, str(Path(__file__).parent.parent))
-    try:
-        from main import app
-    except Exception:
-        app = None
-
-
-# ---------------------------------------------------------------------------
-# Fixtures
-# ---------------------------------------------------------------------------
-
-
-@pytest_asyncio.fixture
-async def client():
-    """Async HTTP client wired to the FastAPI app."""
-    if app is None:
-        pytest.skip("Could not import app — skipping integration tests")
-    async with AsyncClient(
-        transport=ASGITransport(app=app), base_url="http://test"
-    ) as ac:
-        yield ac
-
-
-# ---------------------------------------------------------------------------
-# Health check
-# ---------------------------------------------------------------------------
+from main import app
 
 
 @pytest.mark.asyncio
-async def test_health_check(client):
-    """GET / should return 200 with {"status": "ok"}."""
-    response = await client.get("/")
+async def test_health_check():
+    """GET /health should return 200 with status ok."""
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+        response = await client.get("/health")
     assert response.status_code == 200
-    data = response.json()
-    assert data.get("status") == "ok"
-
-
-# ---------------------------------------------------------------------------
-# Books endpoint
-# ---------------------------------------------------------------------------
+    assert response.json() == {"status": "ok"}
 
 
 @pytest.mark.asyncio
-async def test_get_books_empty(client):
-    """GET /books should return 200 with a paginated result containing an items list."""
-    # Patch the database session to return an empty result
+async def test_get_books_empty():
+    """GET /books should return 200 with paginated empty list when DB is empty."""
     mock_result = MagicMock()
-    mock_result.scalars.return_value.all.return_value = []
-    mock_result.scalar.return_value = 0
-
+    mock_result.mappings.return_value.all.return_value = []
     mock_session = AsyncMock()
-    mock_session.execute.return_value = mock_result
+    mock_session.execute = AsyncMock(return_value=mock_result)
+    mock_session.scalar = AsyncMock(return_value=0)
 
-    with patch("main.get_db", return_value=mock_session):
-        response = await client.get("/books")
+    async def override_get_db():
+        yield mock_session
 
-    assert response.status_code == 200
-    data = response.json()
-    # Accept either {"items": [...]} or a list directly
-    if isinstance(data, dict):
+    from app.database import get_db
+    app.dependency_overrides[get_db] = override_get_db
+
+    try:
+        async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+            response = await client.get("/books")
+        assert response.status_code == 200
+        data = response.json()
         assert "items" in data
         assert isinstance(data["items"], list)
-    else:
-        assert isinstance(data, list)
-
-
-# ---------------------------------------------------------------------------
-# Stats endpoint
-# ---------------------------------------------------------------------------
+    finally:
+        app.dependency_overrides.clear()
 
 
 @pytest.mark.asyncio
-async def test_get_stats(client):
+async def test_get_stats():
     """GET /stats should return 200 with expected keys."""
     mock_result = MagicMock()
-    mock_result.scalar.return_value = 0
-
+    mock_result.mappings.return_value.all.return_value = []
     mock_session = AsyncMock()
-    mock_session.execute.return_value = mock_result
+    mock_session.execute = AsyncMock(return_value=mock_result)
+    mock_session.scalar = AsyncMock(return_value=0)
 
-    with patch("main.get_db", return_value=mock_session):
-        response = await client.get("/stats")
+    async def override_get_db():
+        yield mock_session
 
-    assert response.status_code == 200
-    data = response.json()
-    assert isinstance(data, dict)
+    from app.database import get_db
+    app.dependency_overrides[get_db] = override_get_db
 
-    # At minimum we expect some counting keys
-    expected_keys = {"total_books", "total_authors", "languages"}
-    # Accept partial match — at least one key must be present
-    found = expected_keys.intersection(data.keys())
-    assert found, (
-        f"Expected at least one of {expected_keys} in response, got: {list(data.keys())}"
-    )
-
-
-# ---------------------------------------------------------------------------
-# Sanity — no-app fallback (runs even without the real app)
-# ---------------------------------------------------------------------------
+    try:
+        async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+            response = await client.get("/stats")
+        assert response.status_code == 200
+        data = response.json()
+        assert "total_books" in data
+    finally:
+        app.dependency_overrides.clear()
 
 
 def test_placeholder_always_passes():
-    """Placeholder test that always passes — confirms pytest is wired correctly."""
-    assert 1 + 1 == 2
+    """Placeholder test to confirm pytest is collecting correctly."""
+    assert True

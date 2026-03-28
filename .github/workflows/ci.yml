@@ -93,6 +93,9 @@ jobs:
   lint-infra:
     name: Lint Infrastructure (Bicep)
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout code
