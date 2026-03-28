@@ -174,8 +174,8 @@ export default function SearchPage() {
             {t('heading', { fallback: 'Search Books' })}
           </h1>
           <SearchBar
-            initialValue={q}
-            onSearch={(val) => pushParams({ q: val })}
+            defaultValue={q}
+            // onSearch removed - SearchBar handles its own routing
             autoFocus
             placeholder={t('placeholder', { fallback: 'Title, author, or keyword…' })}
           />

@@ -175,8 +175,8 @@ export default function BrowsePage() {
             {/* Search bar */}
             <div className="mb-6">
               <SearchBar
-                initialValue={q}
-                onSearch={(val) => pushParams({ q: val })}
+                defaultValue={q}
+                // onSearch removed - SearchBar handles its own routing
               />
             </div>
 
