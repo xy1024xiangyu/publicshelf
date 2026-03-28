@@ -48,8 +48,8 @@
   },
   "search": {
     "placeholder": "搜索书籍、作者、主题……",
-    "results_for": ""{query}"的搜索结果",
-    "no_results": "未找到"{query}"的搜索结果。",
+    "results_for": "\"{query}\"的搜索结果",
+    "no_results": "未找到\"{query}\"的搜索结果。",
     "refine": "精细搜索",
     "powered_by": "技术支持"
   },

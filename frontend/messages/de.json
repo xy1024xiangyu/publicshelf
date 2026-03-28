@@ -48,8 +48,8 @@
   },
   "search": {
     "placeholder": "Bücher, Autoren, Themen suchen…",
-    "results_for": "Ergebnisse für „{query}"",
-    "no_results": "Keine Ergebnisse für „{query}" gefunden.",
+    "results_for": "Ergebnisse für \"{query}\"",
+    "no_results": "Keine Ergebnisse für \"{query}\" gefunden.",
     "refine": "Ergebnisse verfeinern",
     "powered_by": "Unterstützt von"
   },
