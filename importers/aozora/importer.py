@@ -16,10 +16,10 @@ import httpx
 from slugify import slugify
 from sqlalchemy import text
 
-from importers.common.base_importer import BaseImporter
-from importers.common.db import book_slug_exists, get_session
-from importers.common.storage import upload_bytes
-from importers.aozora.parser import parse_catalog_csv
+from common.base_importer import BaseImporter
+from common.db import book_slug_exists, get_session
+from common.storage import upload_bytes
+from aozora.parser import parse_catalog_csv
 
 logger = logging.getLogger("importer.aozora")
 
