@@ -46,30 +46,27 @@ jobs:
             ${{ runner.os }}-pip-importers-
 
       - name: Install importer dependencies
-        working-directory: importers
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r importers/requirements.txt
 
       - name: Run Gutenberg importer
         if: inputs.source == 'gutenberg' || inputs.source == 'all'
-        working-directory: importers
         run: |
-          python gutenberg_importer.py \
+          PYTHONPATH=importers python importers/gutenberg_importer.py \
             --limit ${{ inputs.limit }} \
             --language "${{ inputs.language }}" \
-            2>&1 | tee ../gutenberg-import.log
+            2>&1 | tee gutenberg-import.log
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Run Aozora importer
         if: inputs.source == 'aozora' || inputs.source == 'all'
-        working-directory: importers
         run: |
-          python aozora_importer.py \
+          PYTHONPATH=importers python importers/aozora_importer.py \
             --limit ${{ inputs.limit }} \
             --language "${{ inputs.language }}" \
-            2>&1 | tee ../aozora-import.log
+            2>&1 | tee aozora-import.log
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
