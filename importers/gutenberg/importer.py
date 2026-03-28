@@ -100,6 +100,7 @@ class GutenbergImporter(BaseImporter):
 
         # Upsert book into Postgres
         book_id = str(uuid.uuid4())
+        import json
         async with get_session() as session:
             await session.execute(
                 text("""
@@ -108,7 +109,7 @@ class GutenbergImporter(BaseImporter):
                         source, license, formats, is_approved
                     ) VALUES (
                         :id, :title, :slug, :language, :year,
-                        'gutenberg', 'public_domain', :formats::jsonb, TRUE
+                        'gutenberg', 'public_domain', cast(:formats as jsonb), TRUE
                     )
                     ON CONFLICT (slug) DO NOTHING
                 """),
@@ -118,7 +119,7 @@ class GutenbergImporter(BaseImporter):
                     "slug": slug,
                     "language": lang,
                     "year": year,
-                    "formats": str(formats).replace("'", '"'),
+                    "formats": json.dumps(formats),
                 },
             )
 
