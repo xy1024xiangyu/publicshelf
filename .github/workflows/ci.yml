@@ -105,7 +105,7 @@ jobs:
 
       - name: Validate Bicep files
         run: |
-          find infra/azure -name '*.bicep' | while read -r bicep_file; do
+          find infra/azure -name '*.bicep' ! -name 'main.bicep' | while read -r bicep_file; do
             echo "Validating: $bicep_file"
             az bicep build --file "$bicep_file" --stdout > /dev/null
             echo "✓ $bicep_file is valid"

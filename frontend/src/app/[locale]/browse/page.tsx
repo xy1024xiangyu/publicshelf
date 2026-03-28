@@ -159,11 +159,11 @@ export default function BrowsePage() {
               onChange={(val) => pushParams({ genre: val })}
             />
             <YearRangeFilter
-              minValue={yearMin ? parseInt(yearMin, 10) : undefined}
-              maxValue={yearMax ? parseInt(yearMax, 10) : undefined}
-              onChange={(min, max) =>
+              minYear={yearMin ? parseInt(yearMin, 10) : ''}
+              maxYear={yearMax ? parseInt(yearMax, 10) : ''}
+              onMinChange={(min) => pushParams({ year_min: min ?? '' })}
+              onMaxChange={(max) =>
                 pushParams({
-                  year_min: min ?? '',
                   year_max: max ?? '',
                 })
               }
