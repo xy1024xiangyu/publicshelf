@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "browse": "Browse",
+    "search": "Search",
+    "submit": "Submit a Book",
+    "languages": "Languages",
+    "about": "About"
+  },
+  "home": {
+    "hero_title": "Thousands of free books, in every language.",
+    "hero_subtitle": "OpenShelf collects public-domain classics and freely licensed modern works from around the world.",
+    "hero_cta_browse": "Browse Library",
+    "hero_cta_search": "Search Books",
+    "stats_books": "Books",
+    "stats_languages": "Languages",
+    "stats_downloads": "Downloads",
+    "featured_title": "Featured Books",
+    "browse_language": "Browse by Language",
+    "browse_era": "Browse by Era"
+  },
+  "browse": {
+    "title": "Browse Books",
+    "filters": "Filters",
+    "all_languages": "All Languages",
+    "all_genres": "All Genres",
+    "all_sources": "All Sources",
+    "all_licenses": "All Licenses",
+    "year_range": "Year Range",
+    "results_count": "{count} books",
+    "no_results": "No books found. Try adjusting your filters.",
+    "page_of": "Page {page} of {total}"
+  },
+  "book": {
+    "download": "Download",
+    "read_online": "Read Online",
+    "formats": "Available Formats",
+    "author": "Author",
+    "authors": "Authors",
+    "published": "Published",
+    "language": "Language",
+    "genre": "Genre",
+    "source": "Source",
+    "license": "License",
+    "pages": "Pages",
+    "words": "Words",
+    "downloads": "Downloads",
+    "also_in": "Also available in"
+  },
+  "search": {
+    "placeholder": "Search books, authors, topics…",
+    "results_for": "Results for \"{query}\"",
+    "no_results": "No results found for \"{query}\".",
+    "refine": "Refine Results",
+    "powered_by": "Powered by"
+  },
+  "submit": {
+    "title": "Submit a Book",
+    "description": "Know a freely licensed book that should be in OpenShelf? Submit it for review.",
+    "field_title": "Book Title",
+    "field_author_name": "Your Name",
+    "field_author_email": "Your Email",
+    "field_year": "Year Published",
+    "field_language": "Language",
+    "field_description": "Description",
+    "field_license": "License",
+    "field_file_url": "File URL (optional)",
+    "submit_button": "Submit for Review",
+    "success_title": "Thank you!",
+    "success_body": "Your submission has been received. We'll review it and get back to you.",
+    "check_status": "Check status",
+    "status_pending": "Pending review",
+    "status_approved": "Approved",
+    "status_rejected": "Rejected"
+  },
+  "reader": {
+    "back_to_book": "Back to book",
+    "settings": "Reader settings",
+    "font_size": "Font size",
+    "theme": "Theme",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "theme_sepia": "Sepia",
+    "loading": "Loading…"
+  },
+  "footer": {
+    "about": "About",
+    "about_text": "OpenShelf is an open-source multilingual library of public-domain and freely licensed books.",
+    "links": "Links",
+    "contribute": "Contribute on GitHub",
+    "api_docs": "API Documentation",
+    "license": "All books are public domain or freely licensed.",
+    "copyright": "© {year} OpenShelf Contributors"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "de": "German",
+    "fr": "French",
+    "es": "Spanish",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "ru": "Russian",
+    "ko": "Korean"
+  },
+  "licenses": {
+    "public_domain": "Public Domain",
+    "cc0": "CC0",
+    "cc_by": "CC BY",
+    "cc_by_sa": "CC BY-SA"
+  },
+  "sources": {
+    "gutenberg": "Project Gutenberg",
+    "aozora": "Aozora Bunko",
+    "archive": "Internet Archive",
+    "author_submitted": "Author Submitted"
+  }
+}

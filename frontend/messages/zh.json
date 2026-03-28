@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "browse": "浏览",
+    "search": "搜索",
+    "submit": "提交书籍",
+    "languages": "语言",
+    "about": "关于"
+  },
+  "home": {
+    "hero_title": "数千本免费书籍，涵盖各种语言。",
+    "hero_subtitle": "OpenShelf 收集全球各地的公共领域经典作品和自由许可的现代作品。",
+    "hero_cta_browse": "浏览图书馆",
+    "hero_cta_search": "搜索书籍",
+    "stats_books": "本书",
+    "stats_languages": "种语言",
+    "stats_downloads": "次下载",
+    "featured_title": "精选书籍",
+    "browse_language": "按语言浏览",
+    "browse_era": "按年代浏览"
+  },
+  "browse": {
+    "title": "浏览书籍",
+    "filters": "筛选器",
+    "all_languages": "所有语言",
+    "all_genres": "所有类型",
+    "all_sources": "所有来源",
+    "all_licenses": "所有许可",
+    "year_range": "年份范围",
+    "results_count": "{count} 本书",
+    "no_results": "未找到书籍，请调整筛选条件。",
+    "page_of": "第 {page} 页，共 {total} 页"
+  },
+  "book": {
+    "download": "下载",
+    "read_online": "在线阅读",
+    "formats": "可用格式",
+    "author": "作者",
+    "authors": "作者",
+    "published": "出版年份",
+    "language": "语言",
+    "genre": "类型",
+    "source": "来源",
+    "license": "许可",
+    "pages": "页数",
+    "words": "字数",
+    "downloads": "下载次数",
+    "also_in": "其他语言版本"
+  },
+  "search": {
+    "placeholder": "搜索书籍、作者、主题……",
+    "results_for": ""{query}"的搜索结果",
+    "no_results": "未找到"{query}"的搜索结果。",
+    "refine": "精细搜索",
+    "powered_by": "技术支持"
+  },
+  "submit": {
+    "title": "提交书籍",
+    "description": "知道一本应该在 OpenShelf 中的自由许可书籍？提交以供审核。",
+    "field_title": "书名",
+    "field_author_name": "您的姓名",
+    "field_author_email": "您的电子邮件",
+    "field_year": "出版年份",
+    "field_language": "语言",
+    "field_description": "描述",
+    "field_license": "许可",
+    "field_file_url": "文件链接（可选）",
+    "submit_button": "提交审核",
+    "success_title": "感谢！",
+    "success_body": "您的提交已收到，我们将对其进行审核并与您联系。",
+    "check_status": "查看状态",
+    "status_pending": "等待审核",
+    "status_approved": "已通过",
+    "status_rejected": "已拒绝"
+  },
+  "reader": {
+    "back_to_book": "返回书目",
+    "settings": "阅读器设置",
+    "font_size": "字体大小",
+    "theme": "主题",
+    "theme_light": "明亮",
+    "theme_dark": "暗黑",
+    "theme_sepia": "复古",
+    "loading": "加载中……"
+  },
+  "footer": {
+    "about": "关于",
+    "about_text": "OpenShelf 是一个开源的多语言图书馆，收录公共领域及自由许可的书籍。",
+    "links": "链接",
+    "contribute": "在 GitHub 上贡献",
+    "api_docs": "API 文档",
+    "license": "所有书籍均属公共领域或自由许可。",
+    "copyright": "© {year} OpenShelf 贡献者"
+  },
+  "languages": {
+    "en": "英语",
+    "zh": "中文",
+    "ja": "日语",
+    "de": "德语",
+    "fr": "法语",
+    "es": "西班牙语",
+    "it": "意大利语",
+    "pt": "葡萄牙语",
+    "ru": "俄语",
+    "ko": "韩语"
+  },
+  "licenses": {
+    "public_domain": "公共领域",
+    "cc0": "CC0",
+    "cc_by": "CC BY",
+    "cc_by_sa": "CC BY-SA"
+  },
+  "sources": {
+    "gutenberg": "古腾堡计划",
+    "aozora": "青空文库",
+    "archive": "互联网档案馆",
+    "author_submitted": "作者提交"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "browse": "Parcourir",
+    "search": "Rechercher",
+    "submit": "Soumettre un livre",
+    "languages": "Langues",
+    "about": "À propos"
+  },
+  "home": {
+    "hero_title": "Des milliers de livres gratuits, dans toutes les langues.",
+    "hero_subtitle": "OpenShelf rassemble des classiques du domaine public et des œuvres modernes sous licence libre du monde entier.",
+    "hero_cta_browse": "Parcourir la bibliothèque",
+    "hero_cta_search": "Rechercher des livres",
+    "stats_books": "Livres",
+    "stats_languages": "Langues",
+    "stats_downloads": "Téléchargements",
+    "featured_title": "Livres en vedette",
+    "browse_language": "Parcourir par langue",
+    "browse_era": "Parcourir par époque"
+  },
+  "browse": {
+    "title": "Parcourir les livres",
+    "filters": "Filtres",
+    "all_languages": "Toutes les langues",
+    "all_genres": "Tous les genres",
+    "all_sources": "Toutes les sources",
+    "all_licenses": "Toutes les licences",
+    "year_range": "Plage d'années",
+    "results_count": "{count} livres",
+    "no_results": "Aucun livre trouvé. Essayez d'ajuster vos filtres.",
+    "page_of": "Page {page} sur {total}"
+  },
+  "book": {
+    "download": "Télécharger",
+    "read_online": "Lire en ligne",
+    "formats": "Formats disponibles",
+    "author": "Auteur",
+    "authors": "Auteurs",
+    "published": "Publié en",
+    "language": "Langue",
+    "genre": "Genre",
+    "source": "Source",
+    "license": "Licence",
+    "pages": "Pages",
+    "words": "Mots",
+    "downloads": "Téléchargements",
+    "also_in": "Également disponible en"
+  },
+  "search": {
+    "placeholder": "Rechercher des livres, des auteurs, des thèmes…",
+    "results_for": "Résultats pour « {query} »",
+    "no_results": "Aucun résultat pour « {query} ».",
+    "refine": "Affiner les résultats",
+    "powered_by": "Propulsé par"
+  },
+  "submit": {
+    "title": "Soumettre un livre",
+    "description": "Connaissez-vous un livre sous licence libre qui devrait être dans OpenShelf ? Soumettez-le pour examen.",
+    "field_title": "Titre du livre",
+    "field_author_name": "Votre nom",
+    "field_author_email": "Votre e-mail",
+    "field_year": "Année de publication",
+    "field_language": "Langue",
+    "field_description": "Description",
+    "field_license": "Licence",
+    "field_file_url": "URL du fichier (facultatif)",
+    "submit_button": "Soumettre pour examen",
+    "success_title": "Merci !",
+    "success_body": "Votre soumission a été reçue. Nous l'examinerons et vous recontacterons.",
+    "check_status": "Vérifier le statut",
+    "status_pending": "En attente d'examen",
+    "status_approved": "Approuvé",
+    "status_rejected": "Refusé"
+  },
+  "reader": {
+    "back_to_book": "Retour au livre",
+    "settings": "Paramètres du lecteur",
+    "font_size": "Taille de police",
+    "theme": "Thème",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre",
+    "theme_sepia": "Sépia",
+    "loading": "Chargement…"
+  },
+  "footer": {
+    "about": "À propos",
+    "about_text": "OpenShelf est une bibliothèque multilingue open source de livres du domaine public et sous licence libre.",
+    "links": "Liens",
+    "contribute": "Contribuer sur GitHub",
+    "api_docs": "Documentation API",
+    "license": "Tous les livres sont dans le domaine public ou sous licence libre.",
+    "copyright": "© {year} Contributeurs OpenShelf"
+  },
+  "languages": {
+    "en": "Anglais",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "de": "Allemand",
+    "fr": "Français",
+    "es": "Espagnol",
+    "it": "Italien",
+    "pt": "Portugais",
+    "ru": "Russe",
+    "ko": "Coréen"
+  },
+  "licenses": {
+    "public_domain": "Domaine public",
+    "cc0": "CC0",
+    "cc_by": "CC BY",
+    "cc_by_sa": "CC BY-SA"
+  },
+  "sources": {
+    "gutenberg": "Projet Gutenberg",
+    "aozora": "Aozora Bunko",
+    "archive": "Internet Archive",
+    "author_submitted": "Soumis par l'auteur"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "browse": "Stöbern",
+    "search": "Suche",
+    "submit": "Buch einreichen",
+    "languages": "Sprachen",
+    "about": "Über uns"
+  },
+  "home": {
+    "hero_title": "Tausende kostenloser Bücher in jeder Sprache.",
+    "hero_subtitle": "OpenShelf sammelt gemeinfreie Klassiker und frei lizenzierte moderne Werke aus aller Welt.",
+    "hero_cta_browse": "Bibliothek durchsuchen",
+    "hero_cta_search": "Bücher suchen",
+    "stats_books": "Bücher",
+    "stats_languages": "Sprachen",
+    "stats_downloads": "Downloads",
+    "featured_title": "Ausgewählte Bücher",
+    "browse_language": "Nach Sprache stöbern",
+    "browse_era": "Nach Epoche stöbern"
+  },
+  "browse": {
+    "title": "Bücher stöbern",
+    "filters": "Filter",
+    "all_languages": "Alle Sprachen",
+    "all_genres": "Alle Genres",
+    "all_sources": "Alle Quellen",
+    "all_licenses": "Alle Lizenzen",
+    "year_range": "Jahreszahl",
+    "results_count": "{count} Bücher",
+    "no_results": "Keine Bücher gefunden. Bitte Filter anpassen.",
+    "page_of": "Seite {page} von {total}"
+  },
+  "book": {
+    "download": "Herunterladen",
+    "read_online": "Online lesen",
+    "formats": "Verfügbare Formate",
+    "author": "Autor",
+    "authors": "Autoren",
+    "published": "Erscheinungsjahr",
+    "language": "Sprache",
+    "genre": "Genre",
+    "source": "Quelle",
+    "license": "Lizenz",
+    "pages": "Seiten",
+    "words": "Wörter",
+    "downloads": "Downloads",
+    "also_in": "Auch verfügbar in"
+  },
+  "search": {
+    "placeholder": "Bücher, Autoren, Themen suchen…",
+    "results_for": "Ergebnisse für „{query}"",
+    "no_results": "Keine Ergebnisse für „{query}" gefunden.",
+    "refine": "Ergebnisse verfeinern",
+    "powered_by": "Unterstützt von"
+  },
+  "submit": {
+    "title": "Buch einreichen",
+    "description": "Kennen Sie ein frei lizenziertes Buch, das in OpenShelf sein sollte? Reichen Sie es zur Prüfung ein.",
+    "field_title": "Buchtitel",
+    "field_author_name": "Ihr Name",
+    "field_author_email": "Ihre E-Mail-Adresse",
+    "field_year": "Erscheinungsjahr",
+    "field_language": "Sprache",
+    "field_description": "Beschreibung",
+    "field_license": "Lizenz",
+    "field_file_url": "Datei-URL (optional)",
+    "submit_button": "Zur Prüfung einreichen",
+    "success_title": "Vielen Dank!",
+    "success_body": "Ihre Einreichung wurde erhalten. Wir werden sie prüfen und uns bei Ihnen melden.",
+    "check_status": "Status prüfen",
+    "status_pending": "In Prüfung",
+    "status_approved": "Genehmigt",
+    "status_rejected": "Abgelehnt"
+  },
+  "reader": {
+    "back_to_book": "Zurück zum Buch",
+    "settings": "Leser-Einstellungen",
+    "font_size": "Schriftgröße",
+    "theme": "Thema",
+    "theme_light": "Hell",
+    "theme_dark": "Dunkel",
+    "theme_sepia": "Sepia",
+    "loading": "Laden…"
+  },
+  "footer": {
+    "about": "Über uns",
+    "about_text": "OpenShelf ist eine Open-Source-Mehrsprachenbibliothek mit gemeinfreien und frei lizenzierten Büchern.",
+    "links": "Links",
+    "contribute": "Auf GitHub beitragen",
+    "api_docs": "API-Dokumentation",
+    "license": "Alle Bücher sind gemeinfrei oder frei lizenziert.",
+    "copyright": "© {year} OpenShelf-Mitwirkende"
+  },
+  "languages": {
+    "en": "Englisch",
+    "zh": "Chinesisch",
+    "ja": "Japanisch",
+    "de": "Deutsch",
+    "fr": "Französisch",
+    "es": "Spanisch",
+    "it": "Italienisch",
+    "pt": "Portugiesisch",
+    "ru": "Russisch",
+    "ko": "Koreanisch"
+  },
+  "licenses": {
+    "public_domain": "Gemeinfrei",
+    "cc0": "CC0",
+    "cc_by": "CC BY",
+    "cc_by_sa": "CC BY-SA"
+  },
+  "sources": {
+    "gutenberg": "Projekt Gutenberg",
+    "aozora": "Aozora Bunko",
+    "archive": "Internet Archive",
+    "author_submitted": "Vom Autor eingereicht"
+  }
+}

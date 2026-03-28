@@ -1,0 +1,85 @@
+name: Import Books
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Book source to import from'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - gutenberg
+          - aozora
+          - all
+      limit:
+        description: 'Max books to import per source'
+        required: true
+        default: '100'
+        type: number
+      language:
+        description: 'Comma-separated language codes to import (e.g. en,zh,ja,de,fr)'
+        required: true
+        default: 'en,zh,ja,de,fr'
+        type: string
+
+jobs:
+  import:
+    name: Import Books
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-importers-${{ hashFiles('importers/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-importers-
+
+      - name: Install importer dependencies
+        working-directory: importers
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Gutenberg importer
+        if: inputs.source == 'gutenberg' || inputs.source == 'all'
+        working-directory: importers
+        run: |
+          python gutenberg_importer.py \
+            --limit ${{ inputs.limit }} \
+            --language "${{ inputs.language }}" \
+            2>&1 | tee ../gutenberg-import.log
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Run Aozora importer
+        if: inputs.source == 'aozora' || inputs.source == 'all'
+        working-directory: importers
+        run: |
+          python aozora_importer.py \
+            --limit ${{ inputs.limit }} \
+            --language "${{ inputs.language }}" \
+            2>&1 | tee ../aozora-import.log
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Upload import logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: import-logs-${{ github.run_id }}
+          path: |
+            gutenberg-import.log
+            aozora-import.log
+          retention-days: 30
+          if-no-files-found: ignore

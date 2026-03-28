@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "browse": "ブラウズ",
+    "search": "検索",
+    "submit": "本を投稿",
+    "languages": "言語",
+    "about": "概要"
+  },
+  "home": {
+    "hero_title": "あらゆる言語の無料の書籍が何千冊も。",
+    "hero_subtitle": "OpenShelf は世界中のパブリックドメインの古典と自由ライセンスの現代作品を収集しています。",
+    "hero_cta_browse": "ライブラリを閲覧",
+    "hero_cta_search": "本を検索",
+    "stats_books": "冊の本",
+    "stats_languages": "言語",
+    "stats_downloads": "ダウンロード",
+    "featured_title": "おすすめの本",
+    "browse_language": "言語で閲覧",
+    "browse_era": "年代で閲覧"
+  },
+  "browse": {
+    "title": "本を閲覧",
+    "filters": "フィルター",
+    "all_languages": "すべての言語",
+    "all_genres": "すべてのジャンル",
+    "all_sources": "すべてのソース",
+    "all_licenses": "すべてのライセンス",
+    "year_range": "年範囲",
+    "results_count": "{count}冊の本",
+    "no_results": "本が見つかりませんでした。フィルターを調整してください。",
+    "page_of": "{total}ページ中{page}ページ"
+  },
+  "book": {
+    "download": "ダウンロード",
+    "read_online": "オンラインで読む",
+    "formats": "利用可能な形式",
+    "author": "著者",
+    "authors": "著者",
+    "published": "出版年",
+    "language": "言語",
+    "genre": "ジャンル",
+    "source": "ソース",
+    "license": "ライセンス",
+    "pages": "ページ数",
+    "words": "文字数",
+    "downloads": "ダウンロード数",
+    "also_in": "他の言語でも利用可能"
+  },
+  "search": {
+    "placeholder": "本、著者、テーマを検索…",
+    "results_for": "「{query}」の検索結果",
+    "no_results": "「{query}」の検索結果が見つかりませんでした。",
+    "refine": "検索を絞り込む",
+    "powered_by": "提供"
+  },
+  "submit": {
+    "title": "本を投稿",
+    "description": "OpenShelf に掲載すべき自由ライセンスの本をご存知ですか？審査のためにご投稿ください。",
+    "field_title": "書籍名",
+    "field_author_name": "お名前",
+    "field_author_email": "メールアドレス",
+    "field_year": "出版年",
+    "field_language": "言語",
+    "field_description": "説明",
+    "field_license": "ライセンス",
+    "field_file_url": "ファイルURL（任意）",
+    "submit_button": "審査のために投稿",
+    "success_title": "ありがとうございます！",
+    "success_body": "投稿を受け付けました。審査後にご連絡いたします。",
+    "check_status": "ステータスを確認",
+    "status_pending": "審査中",
+    "status_approved": "承認済み",
+    "status_rejected": "却下"
+  },
+  "reader": {
+    "back_to_book": "本に戻る",
+    "settings": "リーダー設定",
+    "font_size": "フォントサイズ",
+    "theme": "テーマ",
+    "theme_light": "ライト",
+    "theme_dark": "ダーク",
+    "theme_sepia": "セピア",
+    "loading": "読み込み中…"
+  },
+  "footer": {
+    "about": "概要",
+    "about_text": "OpenShelf は、パブリックドメインおよび自由ライセンスの書籍を収録したオープンソースの多言語ライブラリです。",
+    "links": "リンク",
+    "contribute": "GitHub で貢献",
+    "api_docs": "API ドキュメント",
+    "license": "すべての本はパブリックドメインまたは自由ライセンスです。",
+    "copyright": "© {year} OpenShelf コントリビューター"
+  },
+  "languages": {
+    "en": "英語",
+    "zh": "中国語",
+    "ja": "日本語",
+    "de": "ドイツ語",
+    "fr": "フランス語",
+    "es": "スペイン語",
+    "it": "イタリア語",
+    "pt": "ポルトガル語",
+    "ru": "ロシア語",
+    "ko": "韓国語"
+  },
+  "licenses": {
+    "public_domain": "パブリックドメイン",
+    "cc0": "CC0",
+    "cc_by": "CC BY",
+    "cc_by_sa": "CC BY-SA"
+  },
+  "sources": {
+    "gutenberg": "プロジェクト・グーテンベルク",
+    "aozora": "青空文庫",
+    "archive": "インターネットアーカイブ",
+    "author_submitted": "著者投稿"
+  }
+}
