@@ -64,15 +64,15 @@ jobs:
       - name: Update Container App image
         run: |
           az containerapp update \
-            --name openshelf-backend \
-            --resource-group openshelf-rg \
+            --name publicshelf-backend \
+            --resource-group publicshelf-rg \
             --image ${{ secrets.ACR_LOGIN_SERVER }}/openshelf-backend:${{ github.sha }}
 
       - name: Run database migrations
         run: |
           az containerapp exec \
-            --name openshelf-backend \
-            --resource-group openshelf-rg \
+            --name publicshelf-backend \
+            --resource-group publicshelf-rg \
             --command "alembic upgrade head"
 
       - name: Notify Slack on success
