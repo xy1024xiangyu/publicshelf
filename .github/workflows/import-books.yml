@@ -55,7 +55,7 @@ jobs:
         if: inputs.source == 'gutenberg' || inputs.source == 'all'
         working-directory: importers
         run: |
-          python gutenberg_importer.py \
+          python gutenberg/importer.py \
             --limit ${{ inputs.limit }} \
             --language "${{ inputs.language }}" \
             2>&1 | tee ../gutenberg-import.log
@@ -66,7 +66,7 @@ jobs:
         if: inputs.source == 'aozora' || inputs.source == 'all'
         working-directory: importers
         run: |
-          python aozora_importer.py \
+          python aozora/importer.py \
             --limit ${{ inputs.limit }} \
             --language "${{ inputs.language }}" \
             2>&1 | tee ../aozora-import.log
