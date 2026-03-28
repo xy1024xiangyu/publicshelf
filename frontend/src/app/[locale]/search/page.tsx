@@ -176,8 +176,6 @@ export default function SearchPage() {
           <SearchBar
             defaultValue={q}
             // onSearch removed - SearchBar handles its own routing
-            autoFocus
-            placeholder={t('placeholder', { fallback: 'Title, author, or keyword…' })}
           />
         </div>
 

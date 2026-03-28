@@ -64,7 +64,7 @@ function buildQuery(params: Record<string, string | number | boolean | undefined
 // ─────────────────────────────────────────────
 
 export async function getBooks(filters: BookFilters = {}): Promise<PaginatedBooks> {
-  const query = buildQuery(filters as Record<string, string | number | boolean | undefined | null>);
+  const query = buildQuery(filters as unknown as Record<string, string | number | boolean | undefined | null>);
   return apiFetch<PaginatedBooks>(`/books${query}`);
 }
 
@@ -85,7 +85,7 @@ export function getDownloadUrl(slug: string, format: string): string {
 // ─────────────────────────────────────────────
 
 export async function searchBooks(filters: SearchFilters): Promise<SearchResult> {
-  const query = buildQuery(filters as Record<string, string | number | boolean | undefined | null>);
+  const query = buildQuery(filters as unknown as Record<string, string | number | boolean | undefined | null>);
   return apiFetch<SearchResult>(`/search${query}`);
 }
 
