@@ -74,7 +74,7 @@ async def search_azure(
 
     # Apply language-specific analyzer when language is known
     if language and language in LANGUAGE_ANALYZERS:
-        body["searchFields"] = f"title,description,title_romanized"
+        body["searchFields"] = "title,description,title_romanized"
         # Azure Search supports per-field analyzers; here we hint via queryLanguage
         body["queryLanguage"] = language
 

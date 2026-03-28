@@ -154,6 +154,7 @@ export default function BrowsePage() {
               onChange={(val) => pushParams({ language: val })}
             />
             <GenreFilter
+              genres={[]}
               value={genre}
               onChange={(val) => pushParams({ genre: val })}
             />
